@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tsun Kit Wilson Yaochingco | IT Web Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Lato", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #222;
+      color: #323a3e;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      width: 1200px;
+      margin: 0 auto;
+      background: #f5f5f5;
+    }
+
+    header {
+      text-align: center;
+      background: #323a3e;
+      color: #f5f5f5;
+      padding: 50px 20px;
+    }
+
+    header h6 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+
+    header h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin: 10px 0;
+      font-size: 2em;
+    }
+
+    header .job {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    header .hr {
+      width: 70%;
+      border-bottom: 1px solid #f5f5f5;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    aside {
+      width: 30%;
+      background: #e8e8e8;
+      padding: 40px 30px;
+    }
+
+    .photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      margin: 0 auto 40px;
+      background-image: url("https://i.imgur.com/qfF5NHO.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: grayscale(100%);
+    }
+
+    aside section {
+      margin-bottom: 40px;
+    }
+
+    aside .title {
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #999;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside li {
+      border-bottom: 1px solid #ccc;
+      padding: 6px 0;
+    }
+
+    h5.subtitle {
+      display: inline-block;
+      width: 40%;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    .ans {
+      display: inline-block;
+      width: 55%;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .links ul {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .links .icon {
+      background: #323a3e;
+      color: #f5f5f5;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 38px;
+      font-size: 18px;
+    }
+
+    .main {
+      width: 70%;
+      background: #fff;
+      padding: 50px;
+    }
+
+    .main .title {
+      font-weight: 800;
+      text-transform: uppercase;
+      border-bottom: 2px solid #323a3e;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      letter-spacing: 1px;
+    }
+
+    .main p {
+      font-size: 0.95em;
+      color: #555;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .timeline {
+      margin-top: 20px;
+    }
+
+    .timeline ul {
+      list-style: none;
+      position: relative;
+      padding-left: 80px;
+    }
+
+    .timeline li {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline li:before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 6px;
+      width: 8px;
+      height: 8px;
+      background: #323a3e;
+      border-radius: 50%;
+    }
+
+    .timeline li:after {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 15px;
+      width: 2px;
+      height: 100%;
+      background: #aaa;
+    }
+
+    .timeline time {
+      background: #323a3e;
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 0.8em;
+      margin-right: 10px;
+    }
+
+    .timeline h5 {
+      font-size: 1em;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .timeline p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      background: #323a3e;
+      color: #f5f5f5;
+      padding: 15px 0;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .wrap {
+        width: 95%;
+      }
+
+      .content {
+        flex-direction: column;
+      }
+
+      aside,
+      .main {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h6>Portfolio</h6>
+      <h1>Tsun Kit Wilson Yaochingco</h1>
+      <div class="job">IT Web Developer</div>
+      <div class="hr"></div>
+    </header>
+
+    <app-data-binding-demo></app-data-binding-demo>
+
+    <div class="content">
+      <aside>
+        <div class="photo"></div>
+
+        <section>
+          <h3 class="title">Personal</h3>
+          <ul>
+            <li><h5 class="subtitle">Name</h5><div class="ans">Tsun Kit Wilson Yaochingco</div></li>
+            <li><h5 class="subtitle">Birthday</h5><div class="ans">August 3rd, 1998</div></li>
+            <li><h5 class="subtitle">Language</h5><div class="ans">English, Filipino</div></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="title">Contact</h3>
+          <ul>
+            <li><h5 class="subtitle">Mobile</h5><div class="ans">+63 939 135 9844</div></li>
+            <li><h5 class="subtitle">Email</h5><div class="ans">wilsonyaochingco@gmail.com</div></li>
+            <li><h5 class="subtitle">Address</h5><div class="ans">Angeles City, Philippines</div></li>
+          </ul>
+        </section>
+
+        <section class="links">
+          <h3 class="title">Links</h3>
+          <ul>
+            <li><div class="icon"><i class="fab fa-facebook-f"></i></div></li>
+            <li><div class="icon"><i class="fab fa-twitter"></i></div></li>
+            <li><div class="icon"><i class="fab fa-linkedin-in"></i></div></li>
+            <li><div class="icon"><i class="fab fa-github"></i></div></li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="main">
+        <section>
+          <h3 class="title">Profile</h3>
+          <p>
+            Hardworking and dedicated IT Web Developer with a strong commitment to delivering quality and efficient
+            web solutions. Skilled in both front-end and back-end development, creating secure, responsive, and
+            user-friendly websites. Passionate about learning new technologies and improving systems for better
+            performance and design.
+          </p>
+        </section>
+
+        <section>
+          <h3 class="title">Work Experience</h3>
+          <div class="timeline">
+            <ul>
+              <li>
+                <time>2024</time>
+                <h5>Front-End Developer – Freelance</h5>
+                <p>
+                  Built responsive and modern websites using React, JavaScript, and Tailwind CSS for clients across
+                  multiple industries.
+                </p>
+              </li>
+              <li>
+                <time>2022</time>
+                <h5>Web Developer – TechEdge Solutions</h5>
+                <p>
+                  Developed dynamic web applications with Node.js and MySQL. Improved website load speeds by 40%
+                  through optimization.
+                </p>
+              </li>
+              <li>
+                <time>2020</time>
+                <h5>Junior Developer – WebLaunch Studio</h5>
+                <p>
+                  Assisted in building and maintaining client websites, focusing on clean design and cross-browser
+                  compatibility.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="title">Software Skills</h3>
+          <ul>
+            <li>HTML5 / CSS3 / JavaScript</li>
+            <li>React / Node.js / Express</li>
+            <li>MySQL / MongoDB</li>
+            <li>Figma / Photoshop / Adobe XD</li>
+            <li>Git / GitHub / Docker</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="title">Hobbies</h3>
+          <ul>
+            <li><i class="fa fa-laptop-code"></i> Coding</li>
+            <li><i class="fa fa-bicycle"></i> Cycling</li>
+            <li><i class="fa fa-paint-brush"></i> Design</li>
+            <li><i class="fa fa-plane"></i> Traveling</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Tsun Kit Wilson Yaochingco | All Rights Reserved</p>
+    </footer>
+  </div>
+</body>
+</html>
